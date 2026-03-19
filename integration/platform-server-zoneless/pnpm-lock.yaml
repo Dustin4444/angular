@@ -1,7 +1,7 @@
 lockfileVersion: '9.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
 
 importers:
@@ -33,8 +33,8 @@ importers:
         specifier: link:./in-existing-linked-by-bazel
         version: link:in-existing-linked-by-bazel
       '@angular/ssr':
-        specifier: 21.2.0-rc.0
-        version: 21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)
+        specifier: 21.2.3
+        version: 21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)
       express:
         specifier: ~5.2.0
         version: 5.2.1
@@ -47,10 +47,10 @@ importers:
     devDependencies:
       '@angular-devkit/build-angular':
         specifier: 21.2.0-rc.0
-        version: 21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(protractor@7.0.0)(typescript@5.9.3)
+        version: 21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(protractor@7.0.0)(typescript@5.9.3)
       '@angular/build':
         specifier: 21.2.0-rc.0
-        version: 21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(less@4.4.2)(postcss@8.5.6)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)
+        version: 21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(less@4.4.2)(postcss@8.5.6)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)
       '@angular/cli':
         specifier: 21.2.0-rc.0
         version: 21.2.0-rc.0(@types/node@20.19.33)
@@ -279,13 +279,13 @@ packages:
     engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     hasBin: true
 
-  '@angular/ssr@21.2.0-rc.0':
-    resolution: {integrity: sha512-t2Y+xzXnZwKyT3aC6nhoTNY+gfGlbL9ROdkcsaMcZWGxqW/2qcF5pBj0Wk84Yb1kict+pwPxI1CtugvCgx1YfQ==}
+  '@angular/ssr@21.2.3':
+    resolution: {integrity: sha512-vyBIZMoEA1QOghE0Q8Co1gVyxKaaG1eGUigOjnksRLrkOU9uB1ARaCBFFmnIMtFFMbrvVzhsl6Ojzm4RjKkKdA==}
     peerDependencies:
-      '@angular/common': ^21.0.0 || ^21.2.0-next.0
-      '@angular/core': ^21.0.0 || ^21.2.0-next.0
-      '@angular/platform-server': ^21.0.0 || ^21.2.0-next.0
-      '@angular/router': ^21.0.0 || ^21.2.0-next.0
+      '@angular/common': ^21.0.0
+      '@angular/core': ^21.0.0
+      '@angular/platform-server': ^21.0.0
+      '@angular/router': ^21.0.0
     peerDependenciesMeta:
       '@angular/platform-server':
         optional: true
@@ -1319,7 +1319,6 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       '@cfworker/json-schema': ^4.1.1
-      zod: ^3.25 || ^4.0
     peerDependenciesMeta:
       '@cfworker/json-schema':
         optional: true
@@ -2109,19 +2108,9 @@ packages:
 
   ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
-    peerDependencies:
-      ajv: ^8.0.0
-    peerDependenciesMeta:
-      ajv:
-        optional: true
 
   ajv-formats@3.0.1:
     resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==}
-    peerDependencies:
-      ajv: ^8.0.0
-    peerDependenciesMeta:
-      ajv:
-        optional: true
 
   ajv-keywords@5.1.0:
     resolution: {integrity: sha512-YCS/JNFAUyr5vAuhk1DWm1CBxRHW9LbJ2ozWeemrIqpbsqKjHVxYPyi5GC0rjZIT5JxJ3virVTS8wk4i/Z+krw==}
@@ -4897,13 +4886,13 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-devkit/build-angular@21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(protractor@7.0.0)(typescript@5.9.3)':
+  '@angular-devkit/build-angular@21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(protractor@7.0.0)(typescript@5.9.3)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2102.0-rc.0
-      '@angular-devkit/build-webpack': 0.2102.0-rc.0(webpack-dev-server@5.2.3(tslib@2.8.1)(webpack@5.105.2))(webpack@5.105.2(esbuild@0.27.3))
+      '@angular-devkit/build-webpack': 0.2102.0-rc.0(webpack-dev-server@5.2.3(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3)))(webpack@5.105.2(esbuild@0.27.3))
       '@angular-devkit/core': 21.2.0-rc.0
-      '@angular/build': 21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(less@4.4.2)(postcss@8.5.6)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)
+      '@angular/build': 21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(less@4.4.2)(postcss@8.5.6)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)
       '@angular/compiler-cli': link:in-existing-linked-by-bazel
       '@babel/core': 7.29.0
       '@babel/generator': 7.29.1
@@ -4951,15 +4940,15 @@ snapshots:
       tslib: 2.8.1
       typescript: 5.9.3
       webpack: 5.105.2(esbuild@0.27.3)
-      webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.105.2)
-      webpack-dev-server: 5.2.3(tslib@2.8.1)(webpack@5.105.2)
+      webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3))
+      webpack-dev-server: 5.2.3(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3))
       webpack-merge: 6.0.1
       webpack-subresource-integrity: 5.1.0(webpack@5.105.2(esbuild@0.27.3))
     optionalDependencies:
       '@angular/core': link:in-existing-linked-by-bazel
       '@angular/platform-browser': link:in-existing-linked-by-bazel
       '@angular/platform-server': link:in-existing-linked-by-bazel
-      '@angular/ssr': 21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)
+      '@angular/ssr': 21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)
       esbuild: 0.27.3
       protractor: 7.0.0
     transitivePeerDependencies:
@@ -4985,19 +4974,19 @@ snapshots:
       - webpack-cli
       - yaml
 
-  '@angular-devkit/build-webpack@0.2102.0-rc.0(webpack-dev-server@5.2.3(tslib@2.8.1)(webpack@5.105.2))(webpack@5.105.2(esbuild@0.27.3))':
+  '@angular-devkit/build-webpack@0.2102.0-rc.0(webpack-dev-server@5.2.3(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3)))(webpack@5.105.2(esbuild@0.27.3))':
     dependencies:
       '@angular-devkit/architect': 0.2102.0-rc.0
       rxjs: 7.8.2
       webpack: 5.105.2(esbuild@0.27.3)
-      webpack-dev-server: 5.2.3(tslib@2.8.1)(webpack@5.105.2)
+      webpack-dev-server: 5.2.3(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3))
     transitivePeerDependencies:
       - chokidar
 
   '@angular-devkit/core@21.2.0-rc.0':
     dependencies:
       ajv: 8.18.0
-      ajv-formats: 3.0.1(ajv@8.18.0)
+      ajv-formats: 3.0.1
       jsonc-parser: 3.3.1
       picomatch: 4.0.3
       rxjs: 7.8.2
@@ -5013,7 +5002,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular/build@21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(less@4.4.2)(postcss@8.5.6)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)':
+  '@angular/build@21.2.0-rc.0(@angular/compiler-cli@in-existing-linked-by-bazel)(@angular/compiler@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-browser@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/ssr@21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel))(@types/node@20.19.33)(jiti@2.6.1)(less@4.4.2)(postcss@8.5.6)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2102.0-rc.0
@@ -5050,7 +5039,7 @@ snapshots:
       '@angular/core': link:in-existing-linked-by-bazel
       '@angular/platform-browser': link:in-existing-linked-by-bazel
       '@angular/platform-server': link:in-existing-linked-by-bazel
-      '@angular/ssr': 21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)
+      '@angular/ssr': 21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)
       less: 4.4.2
       lmdb: 3.5.1
       postcss: 8.5.6
@@ -5074,7 +5063,7 @@ snapshots:
       '@angular-devkit/schematics': 21.2.0-rc.0
       '@inquirer/prompts': 7.10.1(@types/node@20.19.33)
       '@listr2/prompt-adapter-inquirer': 3.0.5(@inquirer/prompts@7.10.1(@types/node@20.19.33))(@types/node@20.19.33)(listr2@9.0.5)
-      '@modelcontextprotocol/sdk': 1.26.0(zod@4.3.6)
+      '@modelcontextprotocol/sdk': 1.26.0
       '@schematics/angular': 21.2.0-rc.0
       '@yarnpkg/lockfile': 1.1.0
       algoliasearch: 5.48.1
@@ -5093,7 +5082,7 @@ snapshots:
       - chokidar
       - supports-color
 
-  '@angular/ssr@21.2.0-rc.0(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)':
+  '@angular/ssr@21.2.3(@angular/common@in-existing-linked-by-bazel)(@angular/core@in-existing-linked-by-bazel)(@angular/platform-server@in-existing-linked-by-bazel)(@angular/router@in-existing-linked-by-bazel)':
     dependencies:
       '@angular/common': link:in-existing-linked-by-bazel
       '@angular/core': link:in-existing-linked-by-bazel
@@ -6203,11 +6192,11 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.5.1':
     optional: true
 
-  '@modelcontextprotocol/sdk@1.26.0(zod@4.3.6)':
+  '@modelcontextprotocol/sdk@1.26.0':
     dependencies:
       '@hono/node-server': 1.19.9(hono@4.11.9)
       ajv: 8.17.1
-      ajv-formats: 3.0.1(ajv@8.17.1)
+      ajv-formats: 3.0.1
       content-type: 1.0.5
       cors: 2.8.6
       cross-spawn: 7.0.6
@@ -6956,17 +6945,13 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ajv-formats@2.1.1(ajv@8.17.1):
-    optionalDependencies:
+  ajv-formats@2.1.1:
+    dependencies:
       ajv: 8.17.1
 
-  ajv-formats@3.0.1(ajv@8.17.1):
-    optionalDependencies:
+  ajv-formats@3.0.1:
+    dependencies:
       ajv: 8.17.1
-
-  ajv-formats@3.0.1(ajv@8.18.0):
-    optionalDependencies:
-      ajv: 8.18.0
 
   ajv-keywords@5.1.0(ajv@8.17.1):
     dependencies:
@@ -9126,7 +9111,7 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
       ajv: 8.17.1
-      ajv-formats: 2.1.1(ajv@8.17.1)
+      ajv-formats: 2.1.1
       ajv-keywords: 5.1.0(ajv@8.17.1)
 
   select-hose@2.0.0: {}
@@ -9448,7 +9433,7 @@ snapshots:
       minizlib: 3.1.0
       yallist: 5.0.0
 
-  terser-webpack-plugin@5.3.16(esbuild@0.27.3)(webpack@5.105.2):
+  terser-webpack-plugin@5.3.16(esbuild@0.27.3)(webpack@5.105.2(esbuild@0.27.3)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
@@ -9660,7 +9645,7 @@ snapshots:
       semver: 5.7.2
       xml2js: 0.4.23
 
-  webpack-dev-middleware@7.4.5(tslib@2.8.1)(webpack@5.105.2):
+  webpack-dev-middleware@7.4.5(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3)):
     dependencies:
       colorette: 2.0.20
       memfs: 4.56.10(tslib@2.8.1)
@@ -9673,7 +9658,7 @@ snapshots:
     transitivePeerDependencies:
       - tslib
 
-  webpack-dev-server@5.2.3(tslib@2.8.1)(webpack@5.105.2):
+  webpack-dev-server@5.2.3(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -9701,7 +9686,7 @@ snapshots:
       serve-index: 1.9.2
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.105.2)
+      webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3))
       ws: 8.19.0
     optionalDependencies:
       webpack: 5.105.2(esbuild@0.27.3)
@@ -9749,7 +9734,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.16(esbuild@0.27.3)(webpack@5.105.2)
+      terser-webpack-plugin: 5.3.16(esbuild@0.27.3)(webpack@5.105.2(esbuild@0.27.3))
       watchpack: 2.5.1
       webpack-sources: 3.3.3
     transitivePeerDependencies:
