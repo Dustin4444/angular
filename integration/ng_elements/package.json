@@ -27,7 +27,7 @@
     "jasmine-spec-reporter": "~7.0.0",
     "lite-server": "2.6.1",
     "rollup": "4.63.0",
-    "selenium-webdriver": "3.5.0",
+    "selenium-webdriver": "4.0.0",
     "ts-node": "^10.9.1"
   },
   "scripts": {
